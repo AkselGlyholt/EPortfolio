@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import Landing from "./pages/Landing.jsx";
+import "./App.css";
+import Nav from "./components/Nav.jsx";
+import { useState } from "react";
+import Footer from "./components/Footer.jsx";
 
 function App() {
+  const [ModelOpen, setModelOpen] = useState(false);
+
+  function toggleModal() {
+    if (ModelOpen) {
+      setModelOpen(false);
+      return document.body.classList.remove("modal--open");
+    }
+    setModelOpen(true);
+    document.body.classList += " modal--open";
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Nav toggleModal={toggleModal} />
+        <Routes>
+          <Route
+            path="/"
+            exact
+            toggleModal={toggleModal}
+            element={<Landing toggleModal={toggleModal} />}
+          />
+        </Routes>
+        <Footer toggleModal={toggleModal} />
+      </div>
+    </Router>
   );
 }
 
