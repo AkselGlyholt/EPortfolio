@@ -1,9 +1,8 @@
 import React from "react";
 import SocialLink from "../components/UI/SocialLink";
 import resume from "../assets/resume.pdf";
-import { FaTwitter, FaGithub, FaFilePdf, FaEnvelope } from "react-icons/fa";
+import { FaTwitter, FaGithub, FaFilePdf } from "react-icons/fa";
 import Projects from "../components/Projects.jsx";
-import Modal from "../components/Modal.jsx"
 
 function Landing({ toggleModal }) {
   return (
@@ -12,7 +11,7 @@ function Landing({ toggleModal }) {
         <header className="header">
           <div className="header__content">
             <h1 className="title">Hey</h1>
-            <h1 className="title orange">I'm Aksel</h1>
+            <h1 className="title title2 orange">I'm Aksel</h1>
             <p className="header__para">
               I'm a <b className="orange">Frontend Software Engineer</b> with a
               strong passion for building web applications with great user
@@ -36,13 +35,9 @@ function Landing({ toggleModal }) {
             </div>
           </div>
         </header>
-        <button className="mail__btn click" onClick={toggleModal}>
-          <FaEnvelope />
-        </button>
         <a href="/#projects" className="scroll">
           <div className="scroll__icon click"></div>
         </a>
-        <Modal toggleModal={toggleModal} />
       </section>
       <Projects />
     </>

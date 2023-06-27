@@ -1,12 +1,12 @@
 import React from "react";
 
-function FooterLink({ href, text, onclick, target }) {
+function FooterLink({ href, target, onClick, text }) {
   return (
     <a
       href={href}
       target={target}
       rel="noreferrer"
-      onClick={onclick}
+      onClick={onClick}
       className="
           footer__social--link
           link__hover-effect

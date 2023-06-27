@@ -8,8 +8,25 @@ import semiCircle from "./assets/semi circle.svg";
 import circle from "./assets/circle.svg";
 import squiggly from "./assets/squiggly.svg";
 import triangly from "./assets/triangle.svg";
+import Modal from "./components/UI/Modal.jsx";
 
 function App() {
+  function handeLoad() {
+    document.querySelector(".title").classList.add("show");
+    setTimeout(() => {
+      document.querySelector(".title2").classList.add("show");
+      setTimeout(() => {
+        document.querySelector(".header__para").classList.add("show");
+      }, 200);
+      setTimeout(() => {
+        document.querySelector(".social__list").classList.add("show");
+        setTimeout(() => {
+          document.querySelector("nav").classList.add("show");
+        }, 400);
+      }, 400);
+    }, 200);
+  }
+
   const [ModelOpen, setModelOpen] = useState(false);
 
   function toggleModal() {
@@ -19,6 +36,7 @@ function App() {
     }
     setModelOpen(true);
     document.body.classList += " modal--open";
+    document.documentElement.scrollTop = 0;
   }
 
   const scaleFactor = 1 / 20;
@@ -39,7 +57,7 @@ function App() {
 
   return (
     <Router>
-      <div className="App" onMouseMove={(event) => moveBackground(event)} >
+      <div onLoad={handeLoad} className="App" onMouseMove={(event) => moveBackground(event)}>
         <img alt="" src={semiCircle} className="shape shape--0" />
         <img alt="" src={circle} className="shape shape--1" />
         <img alt="" src={squiggly} className="shape shape--2" />
@@ -50,6 +68,7 @@ function App() {
         <img alt="" src={circle} className="shape shape--7" />
         <img alt="" src={semiCircle} className="shape shape--8" />
         <Nav toggleModal={toggleModal} />
+        <Modal toggleModal={toggleModal} />
         <Routes>
           <Route
             path="/"

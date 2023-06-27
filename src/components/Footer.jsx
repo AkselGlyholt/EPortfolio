@@ -3,7 +3,7 @@ import Logo from "../assets/logo.svg";
 import Resume from "../assets/resume.pdf";
 import FooterLink from "./UI/FooterLink";
 
-function Footer({ toggleModel }) {
+function Footer({ toggleModal }) {
   return (
     <footer>
       <div className="container">
@@ -33,7 +33,7 @@ function Footer({ toggleModel }) {
             <FooterLink
               href="/#"
               target="_self"
-              onClick={toggleModel}
+              onClick={toggleModal}
               text="Contact"
             />
             <FooterLink
