@@ -1,8 +1,8 @@
 import React from "react";
 import FeaturedProject from "./UI/FeaturedProject.jsx";
-import ecommerceImage from "../assets/ecommerceWebsite.png";
-import netflixImage from "../assets/NetflixClone.png";
-import movieDataBaseImg from "../assets/moviedatabase.png";
+import ecommerceImage from "../assets/ecommerceWebsite.webp";
+import netflixImage from "../assets/NetflixClone.webp";
+import movieDataBaseImg from "../assets/moviedatabase.webp";
 import ExtraProject from "./UI/ExtraProject.jsx";
 
 function Projects() {
