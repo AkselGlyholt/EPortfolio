@@ -181,7 +181,7 @@ nav,
 .modal--open nav,
 .modal--open .scroll,
 .modal--open .header {
-  opacity: 0;
+  opacity: 0 !important;
   visibility: hidden;
   transition: all 400ms;
 }
@@ -424,29 +424,13 @@ nav,
 
 nav {
   display: flex;
-  position: fixed;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
   height: 100px;
-  z-index: 2000;
-  transition: all 500ms ease;
-  transform: translateY(-70%);
-  opacity: 0;
-}
-
-.scrolled {
-  -webkit-backdrop-filter: blur(5px) brightness(0.97);
-  backdrop-filter: blur(5px) brightness(0.97);
-}
-
-.nav--hidden {
-  margin-top: -100px;
-}
-
-.dark-theme .scrolled {
-  -webkit-backdrop-filter: blur(5px) brightness(0.8);
-  backdrop-filter: blur(5px) brightness(0.8);
 }
 
 .nav--container {

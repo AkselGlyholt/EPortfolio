@@ -47,15 +47,15 @@ function Modal({ toggleModal }) {
             Frontend Software Engineer.
           </h4>
           <p className="modal__para">
+            {" "}
             I'm a 14 year-old Danish{" "}
             <b className="orange">frontend software engineer</b> with experience
-            developing websites for the tech companie{" "}
-            <b className="orange">Adverseflow</b> and freelancing websites for
-            small and independent businesses
-            <br />
-            <br />I currently solve difficult engineering problems every day
-            with the <b className="orange">Adverseflow team</b>
-            using <b className="orange">JavaScript ES6+, HTML</b> and{" "}
+            developing websites for the tech company{" "}
+            <b className="orange">StrailX</b> and freelancing websites for small
+            and independent businesses <br /> <br /> I currently solve difficult
+            engineering problems every day with the{" "}
+            <b className="orange">StrailX team</b> using{" "}
+            <b className="orange">JavaScript ES6+, HTML</b> and{" "}
             <b className="orange">CSS</b>
           </p>
           <div className="modal__languages">

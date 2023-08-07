@@ -48,32 +48,6 @@ function Nav({ toggleModal }) {
     };
   }, []);
 
-  let lastScrollY = window.scrollY;
-
-  window.addEventListener("scroll", () => {
-    if (lastScrollY < window.scrollY) {
-      document.querySelector("nav").classList.add("nav--hidden");
-    } else {
-      document.querySelector("nav").classList.remove("nav--hidden");
-    }
-
-    lastScrollY = window.scrollY;
-
-    if (window.scrollY !== 0) {
-      document.querySelector("nav").classList.add("scrolled");
-    } else {
-      document.querySelector("nav").classList.remove("scrolled");
-    }
-  });
-
-  useEffect(() => {
-    if (window.scrollY !== 0) {
-      document.querySelector("nav").classList.add("scrolled");
-    } else {
-      document.querySelector("nav").classList.remove("scrolled");
-    }
-  }, []);
-
   return (
     <nav>
       <div className="nav--container">

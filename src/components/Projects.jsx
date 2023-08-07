@@ -2,7 +2,6 @@ import React from "react";
 import FeaturedProject from "./UI/FeaturedProject.jsx";
 import ecommerceImage from "../assets/ecommerceWebsite.webp";
 import netflixImage from "../assets/NetflixClone.webp";
-import movieDataBaseImg from "../assets/moviedatabase.webp";
 import ExtraProject from "./UI/ExtraProject.jsx";
 
 function Projects() {
@@ -27,20 +26,11 @@ function Projects() {
             <FeaturedProject
               title="Netflix Clone"
               tools="HTML CSS TypeScript NextJS TailwindCSS"
-              para="A 1:1 copy of Netflix, with genre listing, working accounts and payments and watchable trailers"
+              para="A 1:1 copy of Netflix with genre listing, accounts, payments and watchable trailers"
               img={netflixImage}
               github="https://github.com/AkselGlyholt/netflix-clone"
               link="https://netflix-clone-5mft.vercel.app/"
               even={true}
-            />
-            <FeaturedProject
-              title="Movie Database"
-              tools="HTML CSS JavaScript React"
-              para="Lists movies by search prompt and lists them and some info about them using the TMDB API"
-              img={movieDataBaseImg}
-              github="https://github.com/AkselGlyholt/MoviesDatabase"
-              link="https://movies-database-beige.vercel.app"
-              even={false}
             />
           </ul>
         </div>
