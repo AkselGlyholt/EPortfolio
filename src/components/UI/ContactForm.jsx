@@ -1,8 +1,8 @@
 import React from "react";
 
-function ContactForm({ contact, form }) {
+function ContactForm({ contact }) {
   return (
-    <form id="contact__form" rel={form} onSubmit={contact}>
+    <form id="contact__form" onSubmit={contact}>
       <div className="form__item">
         <label className="form__item--label">Name</label>
         <input className="input" name="user_name" type="text" required></input>

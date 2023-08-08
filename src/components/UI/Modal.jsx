@@ -1,37 +1,31 @@
-import React, { useRef } from "react";
+import React from "react";
 import Language from "./Language";
 import emailjs from "@emailjs/browser";
 import ContactForm from "./ContactForm";
 import { FaEnvelope, FaSpinner, FaTimes } from "react-icons/fa";
 
 function Modal({ toggleModal }) {
-  const form = useRef();
-
   function contact(e) {
     e.preventDefault();
-
-    document.querySelector(".contact__sending--container").style.display =
-      "flex";
 
     emailjs
       .sendForm(
         "service_1b4w8fi",
         "template_78r51bl",
-        form.current,
+        e.target,
         "_eq0jCVCj_ouc5Hp5"
       )
       .then(
         (result) => {
-          document.querySelector(".contact__sending--container").style.display =
+          document.querySelector(".modal__overlay--loading").style.display =
             "none";
-          document.querySelector(".contact__succes").style.display = "flex";
-          console.log(result);
+          document.querySelector(".modal__overlay--success").style.display =
+            "flex";
         },
         (error) => {
-          document.querySelector(".contact__sending--container").style.display =
+          document.querySelector(".modal__overlay--loading").style.display =
             "none";
           document.querySelector(".contact__error").style.display = "flex";
-          console.log(error.text);
         }
       );
   }
@@ -95,7 +89,7 @@ function Modal({ toggleModal }) {
           <h3 className="modal__sub-title modal__sub-title--contact">
             I'm currently open to new opportunities.
           </h3>
-          <ContactForm contact={contact} form={form} />
+          <ContactForm contact={(event) => contact(event)} />
           <div className="modal__overlay modal__overlay--loading">
             <FaSpinner />
           </div>

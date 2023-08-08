@@ -608,7 +608,7 @@ nav {
   display: none;
   align-items: center;
   justify-content: center;
-  z-index: -1;
+  z-index: 5;
 }
 
 .modal__overlay--loading {
@@ -629,7 +629,7 @@ nav {
   display: flex;
 }
 
-.fa-spinner {
+.modal__overlay--loading svg {
   animation: spinner 750ms infinite linear;
 }
 
