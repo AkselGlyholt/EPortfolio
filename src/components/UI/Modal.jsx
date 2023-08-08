@@ -8,6 +8,8 @@ function Modal({ toggleModal }) {
   function contact(e) {
     e.preventDefault();
 
+    document.querySelector(".modal__overlay--loading").style.display = "flex";
+
     emailjs
       .sendForm(
         "service_1b4w8fi",
