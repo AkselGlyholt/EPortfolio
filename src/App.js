@@ -12,19 +12,21 @@ import Modal from "./components/UI/Modal.jsx";
 
 function App() {
   function handeLoad() {
-    document.querySelector(".title").classList.add("show");
     setTimeout(() => {
-      document.querySelector(".title2").classList.add("show");
+      document.querySelector(".title").classList.add("show");
       setTimeout(() => {
-        document.querySelector(".header__para").classList.add("show");
-      }, 200);
-      setTimeout(() => {
-        document.querySelector(".social__list").classList.add("show");
+        document.querySelector(".title2").classList.add("show");
         setTimeout(() => {
-          document.querySelector("nav").classList.add("show");
-        }, 400);
-      }, 400);
-    }, 200);
+          document.querySelector(".header__para").classList.add("show");
+          setTimeout(() => {
+            document.querySelector(".social__list").classList.add("show");
+            setTimeout(() => {
+              document.querySelector("nav").classList.add("show");
+            }, 10);
+          }, 130);
+        }, 130);
+      }, 130);
+    }, 300)
   }
 
   const [ModelOpen, setModelOpen] = useState(false);
@@ -57,7 +59,11 @@ function App() {
 
   return (
     <Router>
-      <div onLoad={handeLoad} className="App" onMouseMove={(event) => moveBackground(event)}>
+      <div
+        onLoad={handeLoad}
+        className="App"
+        onMouseMove={(event) => moveBackground(event)}
+      >
         <img alt="" src={semiCircle} className="shape shape--0" />
         <img alt="" src={circle} className="shape shape--1" />
         <img alt="" src={squiggly} className="shape shape--2" />

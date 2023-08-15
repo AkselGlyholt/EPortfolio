@@ -76,7 +76,7 @@ function Modal({ toggleModal }) {
               text="React"
             />
             <Language
-              src="https://cdn.iconscout.com/icon/free/png-512/nuxt-dot-js-3521615-2945059.png"
+              src="https://www.svgrepo.com/show/354113/nextjs-icon.svg"
               text="NextJS"
             />
           </div>
