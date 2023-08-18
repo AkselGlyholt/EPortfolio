@@ -1,5 +1,3 @@
-import React from "react";
-
 function ContactForm({ contact }) {
   return (
     <form id="contact__form" onSubmit={contact}>

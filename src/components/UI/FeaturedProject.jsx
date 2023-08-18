@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FaGithub, FaLink } from "react-icons/fa";
 import Skeleton from "./Skeleton";
 
@@ -18,7 +18,7 @@ function Project({ title, tools, para, img, github, link, even }) {
     return () => {
       mountedRef.current = false;
     };
-  }, [imag]);
+  }, [img]);
 
   return (
     <>

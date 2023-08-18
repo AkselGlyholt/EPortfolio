@@ -9,26 +9,9 @@ import circle from "./assets/circle.svg";
 import squiggly from "./assets/squiggly.svg";
 import triangly from "./assets/triangle.svg";
 import Modal from "./components/UI/Modal.jsx";
+import { handeLoad } from "./lib/DomHandler.jsx";
 
 function App() {
-  function handeLoad() {
-    setTimeout(() => {
-      document.querySelector(".title").classList.add("show");
-      setTimeout(() => {
-        document.querySelector(".title2").classList.add("show");
-        setTimeout(() => {
-          document.querySelector(".header__para").classList.add("show");
-          setTimeout(() => {
-            document.querySelector(".social__list").classList.add("show");
-            setTimeout(() => {
-              document.querySelector("nav").classList.add("show");
-            }, 10);
-          }, 130);
-        }, 130);
-      }, 130);
-    }, 300)
-  }
-
   const [ModelOpen, setModelOpen] = useState(false);
 
   function toggleModal() {

@@ -1,5 +1,3 @@
-import React from "react";
-
 function FooterLink({ href, target, onClick, text }) {
   return (
     <a

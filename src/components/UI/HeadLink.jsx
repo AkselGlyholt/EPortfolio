@@ -1,5 +1,3 @@
-import React from "react";
-
 function HeadLink({ href, text, onClick }) {
   return (
     <li className="nav__link">

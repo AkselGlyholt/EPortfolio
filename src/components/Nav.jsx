@@ -1,53 +1,9 @@
-import React, { useCallback, useEffect, useState } from "react";
 import Logo from "../assets/logo.svg";
 import { FaAdjust } from "react-icons/fa";
 import HeadLink from "./UI/HeadLink";
-import whiteLogo from "../assets/favi-white.ico";
-import blackLogo from "../assets/favi-black.ico";
+import { toggleContrast } from "../lib/DomHandler";
 
 function Nav({ toggleModal }) {
-  const [contrast, setContrast] = useState(true);
-
-  const toggleContrast = useCallback(() => {
-    setContrast(!contrast);
-    if (contrast) {
-      document.body.classList += " dark-theme";
-    } else {
-      document.body.classList.remove("dark-theme");
-    }
-  }, [contrast])
-
-  function setFavicon(contrast) {
-    var link =
-      document.querySelector("link[rel*='icon']") ||
-      document.createElement("link");
-    link.type = "image/x-icon";
-    link.rel = "shortcut icon";
-    if (contrast === "dark") {
-      link.href = blackLogo;
-    } else {
-      link.href = whiteLogo;
-    }
-
-    document.getElementsByTagName("head")[0].appendChild(link);
-  }
-
-  window
-    .matchMedia("(prefers-color-scheme: dark)")
-    .addEventListener("change", (event) => {
-      const newColorScheme = event.matches ? "light" : "dark";
-      setFavicon(newColorScheme);
-    });
-
-  useEffect(() => {
-    if (
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-    ) {
-      setFavicon("light");
-    };
-  }, []);
-
   return (
     <nav>
       <div className="nav--container">

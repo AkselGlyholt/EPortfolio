@@ -1,4 +1,3 @@
-import React from "react";
 import FeaturedProject from "./UI/FeaturedProject.jsx";
 import ecommerceImage from "../assets/ecommerceWebsite.webp";
 import netflixImage from "../assets/NetflixClone.webp";

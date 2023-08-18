@@ -1,5 +1,3 @@
-import React from "react";
-
 function Language({ src, text }) {
   return (
     <figure className="modal__language">

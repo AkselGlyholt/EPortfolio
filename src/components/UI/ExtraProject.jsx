@@ -1,4 +1,3 @@
-import React from "react";
 import { FaGithub, FaLink, FaRegFolder } from "react-icons/fa";
 
 function ExtraProject({ title, para, tools, github, link }) {

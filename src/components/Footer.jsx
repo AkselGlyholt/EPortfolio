@@ -1,4 +1,3 @@
-import React from "react";
 import Logo from "../assets/logo.svg";
 import Resume from "../assets/resume.pdf";
 import FooterLink from "./UI/FooterLink";

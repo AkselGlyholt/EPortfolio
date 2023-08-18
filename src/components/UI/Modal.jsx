@@ -1,35 +1,27 @@
-import React from "react";
 import Language from "./Language";
-import emailjs from "@emailjs/browser";
 import ContactForm from "./ContactForm";
 import { FaEnvelope, FaSpinner, FaTimes } from "react-icons/fa";
+import { sendForm } from "../../lib/EmailJS.js"
 
 function Modal({ toggleModal }) {
   function contact(e) {
     e.preventDefault();
-
-    document.querySelector(".modal__overlay--loading").style.display = "flex";
-
-    emailjs
-      .sendForm(
-        "service_1b4w8fi",
-        "template_78r51bl",
-        e.target,
-        "_eq0jCVCj_ouc5Hp5"
-      )
-      .then(
-        (result) => {
-          document.querySelector(".modal__overlay--loading").style.display =
-            "none";
-          document.querySelector(".modal__overlay--success").style.display =
-            "flex";
-        },
-        (error) => {
-          document.querySelector(".modal__overlay--loading").style.display =
-            "none";
-          document.querySelector(".contact__error").style.display = "flex";
-        }
-      );
+  
+    const loadingOverlay = document.querySelector(".modal__overlay--loading");
+  
+    loadingOverlay.style.display = "flex";
+  
+    sendForm(e.target)
+      .then(() => {
+        loadingOverlay.style.display = "none";
+        const successOverlay = document.querySelector(".modal__overlay--success");
+        successOverlay.style.display = "flex";
+      })
+      .catch((error) => {
+        loadingOverlay.style.display = "none";
+        alert("Something went wrong! \nContact me at: me@akselglyholt.com");
+        console.error("Error:", error);
+      });
   }
 
   return (

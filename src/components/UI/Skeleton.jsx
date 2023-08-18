@@ -1,8 +1,4 @@
-import React from "react";
-
 const Skeleton = ({ width, height, borderRadius, classN, img }) => {
-  console.log(classN);
-
   return (
     <>
       {img ? (
