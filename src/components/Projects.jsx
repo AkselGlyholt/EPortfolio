@@ -18,8 +18,8 @@ function Projects() {
               para="Library is a online ecommerce website with a big set of
                     books in every genre."
               img={ecommerceImage}
-              github="https://github.com/AkselGlyholt/library-react-build"
-              link="https://akselglyholt.github.io/library-react-build/"
+              github="https://github.com/AkselGlyholt/library-react"
+              link="https://library.akselglyholt.com"
               even={false}
             />
             <FeaturedProject
