@@ -64,6 +64,14 @@ function Modal({ toggleModal }) {
               text="TypeScript"
             />
             <Language
+              src="https://cdn.iconscout.com/icon/free/png-512/free-swift-21-1175088.png"
+              text="Swift"
+            />
+            <Language
+              src="https://www.swiftbysundell.com/images/discover/swiftui/icon.png"
+              text="SwiftUI"
+            />
+            <Language
               src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png"
               text="React"
             />
