@@ -36,7 +36,7 @@ function Modal({ toggleModal }) {
           </h4>
           <p className="modal__para">
             {" "}
-            I'm a 14 year-old Danish{" "}
+            I'm a 15 year-old Danish{" "}
             <b className="orange">frontend software engineer</b> with experience
             developing websites for the tech company{" "}
             <b className="orange">StrailX</b> and freelancing websites for small
