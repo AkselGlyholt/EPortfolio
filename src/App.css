@@ -564,6 +564,14 @@ nav {
   font-size: 26px;
 }
 
+.modal__title--about {
+  color: black !important;
+}
+
+.modal__sub-title--about {
+  color: rgba(0, 0, 0, 0.764) !important;
+}
+
 .modal__sub-title {
   margin: 12px 0 24px 0;
   font-size: 14px;
