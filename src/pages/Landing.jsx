@@ -1,6 +1,5 @@
 import React from "react";
 import SocialLink from "../components/UI/SocialLink";
-import resume from "../assets/resume.pdf";
 import { FaTwitter, FaGithub, FaFilePdf } from "react-icons/fa";
 import Projects from "../components/Projects.jsx";
 
@@ -31,7 +30,7 @@ function Landing({ toggleModal }) {
                 href="https://github.com/AkselGlyholt"
                 icon={<FaGithub />}
               />
-              <SocialLink href={resume} icon={<FaFilePdf />} />
+              <SocialLink href="/resume.pdf" icon={<FaFilePdf />} />
             </div>
           </div>
         </header>

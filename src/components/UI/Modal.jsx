@@ -68,8 +68,8 @@ function Modal({ toggleModal }) {
               text="Swift"
             />
             <Language
-              src="https://www.swiftbysundell.com/images/discover/swiftui/icon.png"
-              text="SwiftUI"
+              src="https://cdn.iconscout.com/icon/free/png-512/free-lua-3521554-2944972.png?f=webp&w=512"
+              text="LUA"
             />
             <Language
               src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png"
